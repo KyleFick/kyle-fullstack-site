@@ -24,3 +24,26 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Neon glow helpers */
+.neon-pink {
+  text-shadow: 0 0 8px #ff2bd6, 0 0 20px #ff2bd6;
+}
+
+.neon-blue {
+  text-shadow: 0 0 8px #00eaff, 0 0 20px #00eaff;
+}
+
+/* Glass effect */
+.glass {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Background glow */
+.bg-glow {
+  background:
+          radial-gradient(circle at 20% 20%, #7a5cff22, transparent),
+          radial-gradient(circle at 80% 80%, #00eaff22, transparent);
+}

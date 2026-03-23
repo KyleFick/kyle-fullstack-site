@@ -2,15 +2,17 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import ParticlesBg from "@/components/ParticlesBg";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
   return (
     <section className="min-h-screen flex items-center bg-[#0a0a0f] text-white px-6 md:px-16">
-      
+      {/*<ParticlesBg />*/}
       <div className="grid md:grid-cols-2 gap-10 items-center w-full max-w-7xl mx-auto">
 
         {/* LEFT CONTENT */}
-        <div>
+        <div className="mt-20">
           <motion.h1
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
@@ -19,7 +21,7 @@ export default function Hero() {
           >
             Hi, I'm{" "}
             <span className="text-[#ff2bd6] drop-shadow-[0_0_15px_#ff2bd6]">
-              Kyle
+              Kyle Fick
             </span>
           </motion.h1>
 
@@ -29,7 +31,18 @@ export default function Hero() {
             transition={{ delay: 0.3 }}
             className="mt-4 text-gray-400 max-w-lg"
           >
-            Full Stack Developer building modern, scalable and visually stunning applications with a passion for clean design and performance.
+              <Typewriter
+                  words={[
+                    "Full Stack Developer",
+                    "Next.js Specialist",
+                    "UI/UX Focused",
+                    "Cloud & Scalable Systems",
+                  ]}
+                  loop
+                  cursor
+                  cursorStyle="_"
+              />
+             building modern, scalable and visually stunning applications with a passion for clean design and performance.
           </motion.p>
 
           <motion.div
@@ -38,13 +51,17 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className="mt-6 flex gap-4"
           >
-            <button className="px-6 py-3 bg-[#ff2bd6] text-black font-semibold rounded-lg shadow-[0_0_20px_#ff2bd6] hover:scale-105 transition">
-              View Projects
-            </button>
+            <a href="#projects">
+                <button className="px-6 py-3 bg-[#ff2bd6] text-black font-semibold rounded-lg shadow-[0_0_20px_#ff2bd6] hover:scale-105 transition">
+                    View Projects
+                </button>
+            </a>
 
-            <button className="px-6 py-3 border border-[#00eaff] text-[#00eaff] rounded-lg shadow-[0_0_15px_#00eaff] hover:scale-105 transition">
-              Contact Me
-            </button>
+            <a href="#contact">
+                <button className="px-6 py-3 border border-[#00eaff] text-[#00eaff] rounded-lg shadow-[0_0_15px_#00eaff] hover:scale-105 transition">
+                    Contact Me
+                </button>
+            </a>
           </motion.div>
         </div>
 
@@ -62,7 +79,7 @@ export default function Hero() {
 
             {/* Your Image */}
             <Image
-              src="/profile.png" // <-- replace with your image
+              src="/CartoonProfile.png"
               alt="Kyle"
               width={350}
               height={350}
