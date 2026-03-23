@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import ParticlesBg from "@/components/ParticlesBg";
 import { Typewriter } from "react-simple-typewriter";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -51,17 +51,17 @@ export default function Hero() {
             transition={{ delay: 0.6 }}
             className="mt-6 flex gap-4"
           >
-            <a href="#projects">
+            <Link href="#projects">
                 <button className="px-6 py-3 bg-[#ff2bd6] text-black font-semibold rounded-lg shadow-[0_0_20px_#ff2bd6] hover:scale-105 transition">
                     View Projects
                 </button>
-            </a>
+            </Link>
 
-            <a href="#contact">
+            <Link href="#contact">
                 <button className="px-6 py-3 border border-[#00eaff] text-[#00eaff] rounded-lg shadow-[0_0_15px_#00eaff] hover:scale-105 transition">
                     Contact Me
                 </button>
-            </a>
+            </Link>
           </motion.div>
         </div>
 
