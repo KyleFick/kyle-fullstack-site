@@ -36,7 +36,7 @@ export default function Hero() {
                     "Full Stack Developer",
                     "Next.js Specialist",
                     "UI/UX Focused",
-                    "Cloud & Scalable Systems",
+                    "",
                   ]}
                   loop
                   cursor
@@ -84,6 +84,7 @@ export default function Hero() {
               width={350}
               height={350}
               className="relative rounded-full object-cover border-4 border-[#111] shadow-[0_0_30px_#7a5cff]"
+              loading="eager"
             />
           </div>
         </motion.div>

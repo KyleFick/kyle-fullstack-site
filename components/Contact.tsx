@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import {
     SiInstagram,
     SiLinkerd,
@@ -66,12 +66,13 @@ export default function Contact() {
             className="relative py-32 px-6 text-center overflow-hidden"
         >
             {/* 🌌 Background Glow */}
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#00eaff] opacity-10 blur-3xl rounded-full"></div>
+            <div
+                className="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-[#00eaff] opacity-10 blur-3xl rounded-full"></div>
 
             {/* 🔥 Title */}
             <motion.h2
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{opacity: 0, y: 40}}
+                whileInView={{opacity: 1, y: 0}}
                 className="text-5xl font-bold neon-blue"
             >
                 Let’s Work Together
@@ -79,9 +80,9 @@ export default function Contact() {
 
             {/* ✨ Subtitle */}
             <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.2 }}
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{delay: 0.2}}
                 className="text-gray-400 mt-6 max-w-xl mx-auto"
             >
                 Got a project, idea, or opportunity? Reach out and let’s build something
@@ -89,15 +90,32 @@ export default function Contact() {
             </motion.p>
 
             {/* ⚠️ Communication Notice */}
-            <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.3 }}
-                className="mt-4 text-sm text-gray-500"
+            <motion.div
+                initial={{opacity: 0, y: 10}}
+                whileInView={{opacity: 1, y: 0}}
+                transition={{delay: 0.3}}
+                className="mt-6 max-w-xl mx-auto px-5 py-4 rounded-lg border border-red-500/40 bg-red-500/10 backdrop-blur-md shadow-[0_0_20px_rgba(255,0,0,0.2)]"
             >
-                ⚠️ I don’t take direct phone calls — please contact me via{" "}
-                <span className="text-[#25D366] font-semibold">WhatsApp (call or message)</span>.
-            </motion.p>
+                <motion.p
+                    animate={{
+                        textShadow: [
+                            "0 0 5px rgba(255,0,0,0.4)",
+                            "0 0 15px rgba(255,0,0,0.8)",
+                            "0 0 5px rgba(255,0,0,0.4)",
+                        ],
+                    }}
+                    transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                    }}
+                    className="text-sm md:text-base text-red-300 font-medium text-center"
+                >
+                    🚫 I don’t take direct phone calls — please contact me via{" "}
+                    <span className="text-[#25D366] font-semibold drop-shadow-[0_0_8px_#25D366]">
+                      WhatsApp (call or message)
+                    </span>
+                </motion.p>
+            </motion.div>
 
             {/* 💎 Social Icons */}
             <motion.div
@@ -105,7 +123,7 @@ export default function Contact() {
                 whileInView="visible"
                 variants={{
                     visible: {
-                        transition: { staggerChildren: 0.15 },
+                        transition: {staggerChildren: 0.15},
                     },
                 }}
                 className="flex flex-wrap justify-center gap-6 mt-12"
@@ -200,9 +218,9 @@ export default function Contact() {
             <motion.a
                 href="https://discord.com/users/YOUR_USER_ID"
                 target="_blank"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
+                initial={{opacity: 0}}
+                whileInView={{opacity: 1}}
+                transition={{delay: 0.5}}
                 whileHover={{
                     scale: 1.05,
                     boxShadow: "0 0 30px #5865F2",

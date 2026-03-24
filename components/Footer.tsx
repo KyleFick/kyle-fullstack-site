@@ -6,31 +6,43 @@ import {
     SiTypescript,
     SiTailwindcss,
     SiFramer,
-    SiVercel,
     SiReact,
+    SiLucide,
 } from "react-icons/si";
 
 const tech = [
-    { icon: SiNextdotjs, color: "#ffffff" },
-    { icon: SiReact, color: "#00eaff" },
-    { icon: SiTypescript, color: "#3178c6" },
-    { icon: SiTailwindcss, color: "#38bdf8" },
-    { icon: SiFramer, color: "#ff2bd6" },
-    { icon: SiVercel, color: "#ffffff" },
+    { icon: SiNextdotjs, name: "Next.js" , color: "#ffffff" },
+    { icon: SiReact, name: "React" , color: "#00eaff" },
+    { icon: SiTypescript, name: "TS" , color: "#3178c6" },
+    { icon: SiTailwindcss, name: "Tailwind" , color: "#38bdf8" },
+    { icon: SiFramer, name: "Framer" , color: "#ff2bd6" },
+    { icon: SiLucide, name: "Lucide" , color: "#ffffff" },
 ];
 
 export default function Footer() {
     return (
         <footer className="relative py-20 text-center overflow-hidden border-t border-white/10">
-
+            <motion.div
+                className="flex flex-col items-center space-y-5 relative mb-1"
+            >
+                <motion.h1
+                    initial={{ opacity: 0, y: 40 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    className="text-xl md:text-4xl font-bold leading-tight"
+                >
+                    <span className="text-[#ff2bd6] drop-shadow-[0_0_15px_#ff2bd6]">
+                      Built With
+                    </span>
+                </motion.h1>
+            </motion.div>
             {/* 🌌 Glow */}
             <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-[#00eaff] opacity-10 blur-3xl rounded-full"></div>
 
             {/* ⚡ Tech Icons */}
-            <div className="flex justify-center gap-8 relative z-10">
+            <div className="flex justify-center gap-6 relative z-10">
                 {tech.map((item, i) => {
                     const Icon = item.icon;
-
                     return (
                         <motion.div
                             key={i}
@@ -46,6 +58,7 @@ export default function Footer() {
                                     color: item.color,
                                 }}
                             />
+                            <p className="text-xs text-gray-400 mt-2">{item.name}</p>
                         </motion.div>
                     );
                 })}

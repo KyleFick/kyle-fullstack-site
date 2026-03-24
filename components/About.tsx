@@ -4,18 +4,18 @@ import { motion } from "framer-motion";
 
 const highlights = [
     {
-        title: "Full Stack",
-        desc: "Frontend + Backend with scalable architecture",
+        title: "C# / ASP.NET Full Stack",
+        desc: "Building enterprise-grade applications using C#, ASP.NET, Razor, and SQL Server with clean architecture and scalable backend systems.",
         color: "#00eaff",
     },
     {
-        title: "Performance",
-        desc: "Fast, optimized and smooth user experiences",
+        title: "Next.js Full Stack",
+        desc: "Developing modern web apps with Next.js, TypeScript, Node.js, and Express — focusing on performance, API design, and seamless frontend-backend integration.",
         color: "#ff2bd6",
     },
     {
-        title: "UI/UX Focus",
-        desc: "Clean, modern and engaging interfaces",
+        title: "UI / UX Engineering",
+        desc: "Crafting intuitive, responsive interfaces with smooth animations, strong visual hierarchy, and user-focused design principles.",
         color: "#7a5cff",
     },
 ];
@@ -51,12 +51,12 @@ export default function About() {
                 className="mt-16 grid md:grid-cols-2 gap-12 items-center"
             >
                 {/* 🧠 Left Side Text */}
-                <div className="space-y-6 text-lg text-gray-400 leading-relaxed">
+                <div className="space-y-6 text-xl text-gray-400 leading-relaxed">
                     <motion.p variants={fadeUp}>
                         I’m a{" "}
                         <span className="text-neonPink neon-pink font-semibold">
-              full-stack developer
-            </span>{" "}
+                            Full-Stack Developer
+                        </span>{" "}
                         focused on building high-performance, scalable applications with
                         clean architecture and exceptional user experience.
                     </motion.p>
